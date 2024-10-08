@@ -16,42 +16,41 @@ l'application a été developpeée en utilisant vuejs 3 avec la compostion  API 
 
 - Affichage de la Liste des Recettes : Une page permet de visualiser toutes les recettes
 
-- Déploiement sur Vercel : L'application peut être déployée directement sur Vercel pour un accès en ligne.
-
-- Conteneurisation avec Docker : Une image Docker de l'application peut être construite et poussée sur Docker Hub.
 
 ## Prérequis
 
 - nodejs
 - vuejs3
-- Git
+- bootstrap
 - pinia
 
 ## Installation
 
-- Clonez le repository :
+1. Clonez le repository :
+```
+git clone https://github.com/NdiayeOusmanaCamara/gestion-recettes.git
 
-        https://github.com/Mangassouba/tp-44-gestionRecette.git
- - Accédez au dossier du projet
+```
+2. Accédez au dossier du projet
+ ```
+ cd gestion-recettes
+ ```
 
-            cd tp-44-gestionRecette
+3. Installez les dépendances :
+```
+npm install
+```
 
-- Installez les dépendances :
+## Démarrer le projet
+```
+npm run dev
+```
+## Utilisation d'Axios
+L'application de gestion de recettes utilise Axios pour gérer la communication avec le serveur backend. Elle permet de récupérer, ajouter, modifier et supprimer des recettes et des catégories en envoyant des requêtes HTTP.
 
-        npm install
-
-- Lancez l'application en mode développement :
-
-        npm run dev
-
-## Utilisation
-
-- Naviguez entre les pages de menu via la barre de navigation.
-- Utilisez les formulaires pour ajouter ou modifier des recettes.
-- Visualisez les détails d'une recette en cliquant sur l'icône d'œil.
+## Gestion de la Traduction (i18n)
+Pour la gestion multilingue, l'application intègre i18n pour la traduction, permettant aux utilisateurs de changer de langue en temps réel. Les textes de l'interface s'adaptent automatiquement, offrant une expérience utilisateur localisée, avec des solutions de secours en cas de traduction manquante.
 
 ## Auteur
-Hama Houllah Mangasouba
-
-https://github.com/Mangassouba
+[N'Diaye Ousmane Camara](https://github.com/NdiayeOusmanaCamara)
 

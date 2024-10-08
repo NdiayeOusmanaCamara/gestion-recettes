@@ -13,7 +13,7 @@ export const useRecettetore = defineStore('recipes', {
   actions: {
     async loadDataFromApi() {
       try {
-        const resp = await axios.get("http://localhost:3070/recipes");
+        const resp = await axios.get("http://localhost:3000/recipes");
         this.recipes = resp.data;
       } catch (error) {
         this.recipes = [];
@@ -21,17 +21,17 @@ export const useRecettetore = defineStore('recipes', {
     },
     async loadDataFromApis() {
       try {
-        const resp = await axios.get("http://localhost:3070/category");
+        const resp = await axios.get("http://localhost:3000/category");
         this.categorys = resp.data;
       } catch (error) {
         this.categorys = [];
       }
     },
     async addRecipe(recipe) {
-      return await axios.post("http://localhost:3070/recipes", recipe);
+      return await axios.post("http://localhost:3000/recipes", recipe);
     },
     async addCategory(category) {
-      return await axios.post("http://localhost:3070/category", category);
+      return await axios.post("http://localhost:3000/category", category);
     },
     getRecipe(id) {
       return this.recipes.find(recipe => recipe.id === id);
@@ -41,25 +41,25 @@ export const useRecettetore = defineStore('recipes', {
     },
     async updateRecipe(id, updatedRecipe) {
       try {
-        await axios.put(`http://localhost:3070/recipes/${id}`, updatedRecipe);
+        await axios.put(`http://localhost:3000/recipes/${id}`, updatedRecipe);
         await this.loadDataFromApi();
       } catch (error) {}
     },
     async updateCategory(id, updatedCategory) {
       try {
-        await axios.put(`http://localhost:3070/category/${id}`, updatedCategory);
+        await axios.put(`http://localhost:3000/category/${id}`, updatedCategory);
         await this.loadDataFromApis();
       } catch (error) {}
     },
    async deleteRecipe(id) {
       try {
-        await axios.delete(`http://localhost:3070/recipes/${id}`);
+        await axios.delete(`http://localhost:3000/recipes/${id}`);
         await this.loadDataFromApi();
       } catch (error) {}
     },
    async deleteCategory(id) {
       try {
-        await axios.delete(`http://localhost:3070/category/${id}`);
+        await axios.delete(`http://localhost:3000/category/${id}`);
         await this.loadDataFromApis();
       } catch (error) {}
     },
