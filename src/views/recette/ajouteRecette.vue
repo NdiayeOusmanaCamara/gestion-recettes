@@ -30,13 +30,13 @@
           $t("recette.create_page.label_type")
         }}</label>
         <select v-model="type" id="type" class="form-select" required>
-          <option value="entrée">
+          <option value="Entrée">
             {{ $t("recette.create_page.type_entree") }}
           </option>
-          <option value="plat">
+          <option value="Plat">
             {{ $t("recette.create_page.type_plat") }}
           </option>
-          <option value="dessert">
+          <option value="Dessert">
             {{ $t("recette.create_page.type_dessert") }}
           </option>
         </select>
@@ -115,7 +115,7 @@ function handleSubmit() {
     type.value = "";
     ingredient.value = "";
     category_id.value = "";
-    router.push("/recette");
+    router.push({name:"recette"});
   }
   store.addRecipe({
     titre: titre.value,
